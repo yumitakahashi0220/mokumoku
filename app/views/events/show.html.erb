@@ -13,6 +13,9 @@
             </div>
             <h1>
               <%= @event.title %>
+                <% if @event.only_woman? %>
+                <span class="badge bg-pink">女性限定</span>
+                <% end %>
             </h1>
             <% if logged_in? %>
               <div class="ms-auto">
@@ -92,7 +95,7 @@
                               method: :delete,
                               data: { confirm: 'キャンセルします' }
                   %>
-                <% else %>
+                <% elsif !@event.only_woman? || current_user.female? %>
                   <%= link_to 'このもくもく会に参加する',
                               event_attendance_url(@event),
                               class: 'btn btn-primary',

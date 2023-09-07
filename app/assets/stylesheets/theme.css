@@ -7,6 +7,10 @@
   line-height: 1.5rem;
 }
 
+.bg-pink {
+  background-color: #ff69b4 !important;
+}
+
 .icon-sm {
   width: 2rem;
   height: 2rem;
