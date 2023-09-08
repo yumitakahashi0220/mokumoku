@@ -16,10 +16,10 @@
     <%= f.label :prefecture_id %>
     <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, {}, class: 'form-select' %>
   </div>
-  <% if current_user.female? %>
+  <% if current_user.woman? %>
     <div class="mb-3">
     <%= f.check_box :only_woman %>
-    <%= f.label :only_woman, "女性限定" %>
+    <%= f.label :only_woman %>
   </div>
   <% end %>
   <div class="mb-3">
