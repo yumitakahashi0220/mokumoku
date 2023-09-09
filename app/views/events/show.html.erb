@@ -14,7 +14,7 @@
             <h1>
               <%= @event.title %>
                 <% if @event.only_woman? %>
-                <span class="badge bg-pink">女性限定</span>
+                  <span class="badge bg-pink">女性限定</span>
                 <% end %>
             </h1>
             <% if logged_in? %>
